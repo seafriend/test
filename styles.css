@@ -1,0 +1,633 @@
+/* Mervin's Glow = #FFCC52 */
+
+
+/* Navigation Bar */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  min-width: 100%;
+  background-color: #FFCC52;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 90%;
+  position: fixed;
+  z-index: 3;
+  overflow: hidden;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover
+{
+color: #FFCC52;
+}
+
+.navContainer{
+  width: 50vw;
+  height: 8vh;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.topIcon {
+  width: 17px;
+}
+
+.navTop {
+  letter-spacing: 1.5px;
+  display: inline-flex;
+  font-size: 0.77rem;
+  height: 8vh;
+  align-items: center;
+}
+
+.navTop a {
+
+    text-decoration: none;
+    color: white;
+    padding-left: 7px;
+}
+
+.navTop a:hover {
+  color: black;
+}
+
+.navLinks {
+  display: inline-flex;
+    justify-content: space-around;
+    font-size: 0.77rem;
+    height: 8vh;
+    align-items: center;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.navLinks a:hover {
+  color: black;
+}
+
+.navLinks li {
+  list-style: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 20px;
+  height: 1.5px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.5s;
+transition-timing-function: ease-out;
+}
+
+/* Banner */
+.Banner {
+  display: flex;
+  background-image: url("Images/Mervin Grey.png");
+  height: 55vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  position: relative;
+  align-items: center;
+  margin: auto;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50vw;
+  height: 55vh;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.leftCon {
+  display: grid;
+  height: 55vh;
+  overflow-y: hidden;
+}
+
+.Hey{
+  display: grid;
+  height: 27.5vh;
+}
+
+@keyframes fadeHey {
+  from {opacity: 0}
+  to {opacity: 100}
+}
+
+.Hey img{
+  position: absolute;
+  height: 15vh;
+  top: 17vh;
+  left: 25.2vw;
+  z-index: 2;
+  animation-name: fadeHey;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.Hey p {
+  display: none;
+}
+
+@keyframes fadeContact {
+  from {opacity: 0}
+  to {opacity: 100}
+}
+
+.Contact{
+  display: grid;
+  height: 27.5vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: fadeContact;
+  animation-duration: 1s;
+  animation-delay: 2.3s;
+  animation-timing-function: ease-in-out;
+}
+.email {
+  padding-bottom: 3vh;
+}
+    .email:before {
+    content: "";
+    background: url("Images/email.svg") no-repeat 50% 50%/contain;
+    vertical-align: middle;
+    display: inline-block;
+    height: 3.5vh;
+    width: 3.5vh;
+    margin-right: 0.3vw;
+    }
+
+    .zoom:before {
+    content: "";
+    background: url("Images/zoom.svg") no-repeat 50% 50%/contain;
+    display: inline-block;
+    vertical-align: middle;
+    height: 3.5vh;
+    width: 3.5vh;
+    margin-right: 0.3vw;
+    }
+
+.rightCon {
+  display: grid;
+  height: 55vh;
+}
+
+@keyframes moveMervin {
+from {opacity: 0; left:60vw;}
+to {opacity: 100%; left: 55vw;}
+}
+
+.rightCon img {
+  height: 50vh;
+  position: absolute;
+  bottom: 0;
+  left: 55vw;
+  animation-name: moveMervin;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.bannerDiv {
+  height: 0.5vh;
+  margin: 0 auto;
+  background-color: #FFCC52;
+}
+
+/* About Me */
+.About{
+  height: auto;
+  width: 100vw;
+  background-color: white;
+  overflow-y: hidden;
+}
+
+
+.AboutText {
+justify-content: center;
+align-items: center;
+width: 50vw;
+height: auto;
+text-align: center;
+margin: auto;
+padding: 3.5vh 3.0vh;
+padding-right: 5vw;
+overflow-y: hidden;
+}
+
+.AboutText h1 {
+font-family: "Oswald", Impact;
+font-size: 2.5rem;
+color: #FFCC52;
+
+}
+
+.AboutText p{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+/* Resume */
+.Resume {
+height: auto;
+background-color: #FFCC52;
+
+}
+
+.resumeCon {
+width: 50vw;
+height: auto;
+margin: 0 auto;
+overflow-y: hidden;
+}
+
+#resumeDiv {
+  height: 0.8vh;
+  width: 8.3vw;
+  background-color: black;
+}
+
+.resumeh1 {
+  font-family: "Oswald", Impact;
+  font-size: 1.77rem;
+  padding: 2.22vh 0 2.22vh 0;
+}
+
+.resumeh2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.11rem;
+  font-weight: 600;
+  color: #FFCC52;
+  line-height: 3.8vh;
+  width: 12vw;
+  overflow: visible;
+  display: inline;
+}
+.resumeh2 span {
+  background-color: black;
+  padding-left: 1vw;
+  padding-right: 1vw;
+
+}
+
+.resumeDetails {
+  padding-bottom: 2.22vh;
+}
+  /* Proficiencies */
+.proGridM {
+  display: none;
+}
+
+  .proGrid {
+    padding: 2.22vh;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+  }
+
+  .proGrid p{
+    padding-bottom: 2.22vh;
+  }
+
+  .resSpacing {
+    height: 2vh;
+  }
+
+    /* Education */
+  .eduGrid {
+    padding: 2.22vh;
+    display: grid;
+    height: auto;
+    grid-template-columns: 3fr 1fr;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+  }
+
+  .eduGridM{
+    display: none;
+  }
+
+  .List li {
+    list-style-position: inside;
+    display: list-item;
+    font-size: 0.8rem;
+
+  }
+
+    /* Work Experience */
+    .workGrid {
+      padding: 2.22vh;
+      display: grid;
+      height: auto;
+      grid-template-columns: 3fr 1fr;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .workGridM{
+      display: none;
+    }
+
+    .Resume {
+    height: auto;
+    background-color: #black;
+
+    }
+
+    .resumeCon {
+    width: 50vw;
+    height: auto;
+    margin: 0 auto;
+    overflow-y: hidden;
+    }
+
+    #resumeDiv {
+      height: 0.8vh;
+      width: 8.3vw;
+      background-color: black;
+    }
+
+/* My Work*/
+.myWork {
+height: auto;
+background-color: black;
+
+}
+
+.workCon {
+width: 50vw;
+height: auto;
+margin: 0 auto;
+overflow-y: hidden;
+}
+
+#workDiv {
+  height: 0.8vh;
+  width: 8.3vw;
+  margin: auto;
+  background-color: #FFCC52;
+}
+
+.workh1 {
+  font-family: "Oswald", Impact;
+  font-size: 1.77rem;
+  padding: 2.22vh 0 2.22vh 0;
+  color: #FFCC52;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------------------------*/
+
+
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+
+  .navLinks {
+      position: absolute;
+      right: 0;
+      height: 92vh;
+      top: 8vh;
+
+      background-color: #FFCC52;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+
+  .nav-active{
+   transform: translateX(0%);
+ }
+
+  .burger {
+    display: block;
+    position: absolute;
+        right: 10vw;
+  }
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-7px, 2px);
+  overflow: hidden;
+}
+.toggle .line2{
+  opacity: 0;
+  overflow: hidden;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-7px, -2px);
+  overflow: hidden;
+}
+
+
+.navContainer {
+  width: 100vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navTop {
+  position: absolute;
+  left: 10vw;
+}
+
+.Banner {
+  height: 50vh;
+}
+
+.Container {
+  height: inherit;
+}
+
+.leftCon {
+  height: auto;
+  width: 40vw;
+}
+
+.Hey img{
+  visibility: hidden;
+}
+
+.Hey p{
+  display: inline-flex;
+  font-size: 3rem;
+  font-family: "Oswald", Impact;
+  color: #FFCC52;
+  position: absolute;
+  bottom: 52vw;
+  left: 10vw;
+  line-height: 7vh;
+  overflow-y: hidden;
+}
+
+.contact{
+  padding: 0;
+  position: absolute;
+  width: 35vw;
+  height: auto;
+}
+
+li.email
+{
+  display: none;
+}
+
+  li.zoom
+  {
+    display: none;
+  }
+
+.rightCon {
+  height: inherit;
+  width: 60vw;
+  justify-content: center;
+}
+
+@keyframes moveMervin {
+from {opacity: 0; left:60vw;}
+to {opacity: 100%; left: 40vw;}
+}
+
+.rightCon img {
+  height: 45vh;
+  overflow-y: hidden;
+}
+
+.About {
+  height: auto;
+}
+
+.AboutText {
+  width: 100vw;
+  height: auto;
+}
+
+.AboutText h1 {
+font-family: "Oswald", Impact;
+font-size: 1.5rem;
+color: #FFCC52;
+}
+
+.AboutText p{
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  color: black;
+}
+
+.resumeCon {
+width: 100vw;
+}
+
+#resumeDiv {
+  width: 25vw;;
+}
+
+.resumeh1 {
+  padding-left: 5vw;
+}
+
+.resumeh2 {
+  margin-left: 5vw;
+}
+
+.proGrid {
+  display: none;
+}
+
+.proGridM {
+  display: block;
+  padding: 2.22vh;
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+
+.eduGrid{
+  display: none;
+}
+
+.eduGridM {
+  display: block;
+  padding: 2.22vh;
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+
+.workGrid {
+  display: none;
+}
+
+.workGridM {
+  display: block;
+  padding: 2.22vh;
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+
+}
